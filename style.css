@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
 
 * {
     margin: 0;
@@ -25,10 +26,73 @@
     top: 50%;
     left: 50%; 
     transform: translate(-50%, -50%);
-    height: 100px;   
+    background-color: white;
+    padding: 40px 50px;
+    text-align: center;
+    width: 500px;
+    border-radius: 2.5px;
 }
 
-.oneDiv p {
+.innerText {
+    font-size: 14px; 
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+.innerText i {
+    font-size: 26px;
+    margin: 0 7.5px 0 0;
+    text-align: center; 
+    line-height: 28px;
+}
+
+.innerText span {
     font-family: "Raleway";
-    font-size: 32px;
+    font-size: 28px;
+    text-align: center;
+    font-weight: 500;
+    line-height: normal;
+    vertical-align: baseline;
+}
+
+/*---------belowDiv--------*/
+
+.belowDiv {
+    font-size: 16px; 
+    padding: 20px 0 0; 
+    font-weight: 400; 
+    font-family: "Raleway";
+    text-align: right;
+}
+
+.belowDiv span {
+    font-size: 16px; 
+    text-align: right;
+    font-weight: 400; 
+}
+
+/*---------A-tags--------*/
+
+a { 
+    display: inline-block; 
+    font-size: 19.2px; 
+   margin: 30px 2.5px 0px 0px; 
+   padding: 8px 0 0;
+   font-weight: 400; 
+   text-align: center;
+   background-color: green;
+   width: 35px; 
+   height: 35px; 
+   line-height: 17px;
+}
+
+.newQuote {
+    height: 35px; 
+    font-size: 13.6px; 
+    margin: 30px 0px 0px; 
+    padding: 8px 18px 6px; 
+    font-weight: 400; 
+    text-align: right;
+    background-color: green;
 }
