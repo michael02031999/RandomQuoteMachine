@@ -8,29 +8,38 @@
     <link rel="stylesheet" href="./style.css">
 
     <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
-
-    <title>Random Quote</title>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Random Quote</title>  
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
 </head>
+
 <body id="body">
-    <div class="oneDiv" onclick="clickingFunction()">
+    <div class="oneDiv">
         <div class = "innerText">
             <i class="fas fa-quote-left fa-sm"></i>
-            <span>CLick on me!</span>
+            <span class="firstSpan fade-in"></span>
         </div>
         <div class = "belowDiv">
-            <span class="authors">- Leonardo Davinci</span>
+            <span class="authors"></span>
         </div>
-        
+        <div class = "buttons">
             <a class="twitter"><i class="fab fa-twitter"></i></a>
             <a class ="tumbler"><i class="fab fa-tumblr"></i></a>
         
-            <button class="newQuote">New quote</button>
-              
-    </div>
+            <button class="newQuote" onclick="clickingFunction()">New quote</button>
 
+            <div class="myName">
+                <a class="Michael">by MikeyG</a>
+            </div>        
+        </div>
+    </div>
+    
 
     
 </body>
 <script src="C:\Users\Michael's PC\RandomQuoteMachine\app.js"></script>
 <script src="https://kit.fontawesome.com/952dc07df4.js" crossorigin="anonymous"></script>
+
 </html>
