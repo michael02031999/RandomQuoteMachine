@@ -9,8 +9,13 @@ let array = [["All our dreams can come true, if we have the courage to pursue th
         let numPicker = Math.floor(Math.random()*array.length);
 
         /*Quotes*/ 
+        
         document.getElementsByClassName("firstSpan")[0].innerHTML = array[numPicker][0];
+
+
+
         document.getElementsByClassName("authors")[0].innerHTML = array[numPicker][1];
+
 
         /*Colors*/
 
@@ -24,44 +29,40 @@ let array = [["All our dreams can come true, if we have the courage to pursue th
         document.getElementsByClassName("Michael")[0].style.backgroundColor="rgb("+ color +")";
 
 
-function clickingFunction () {
 
-    let color = Math.floor(Math.random()*255) + "," +  Math.floor(Math.random()*255) + "," + Math.floor(Math.random()*255);
+
+$(document).ready(function() {
     
-    document.querySelector("body").style.backgroundColor = "rgb("+ color +")";
+    $(".newQuote").click(function (){
+        var numPicker = Math.floor(Math.random()*array.length);
+
+        let color = Math.floor(Math.random()*255) + "," +  Math.floor(Math.random()*255) + "," + Math.floor(Math.random()*255);
     
-
-        let numPicker = Math.floor(Math.random()*array.length);
-
-        var el = document.getElementsByClassName("fade-in")[0];
-        console.log(el);
-        el.style.animation = "none";
-        el.offsetHeight;
-        el.style.animation=null;
+        $(".innerText").fadeTo(1000, 0, function () {
+            numPicker = Math.floor(Math.random()*array.length);
+            
+            $(".firstSpan").text(array[numPicker][0]).fadeTo(1000, 1);
+            $(".innerText").fadeTo(1000, 1);
+        });
 
 
+        $(".authors").fadeTo(1000, 0, function () {
+            document.getElementsByClassName("authors")[0].style.color="rgb("+ color +")";
+            
+            
+            $(".authors").text(array[numPicker][1]).fadeTo(1000, 1);
+        });
 
 
-
-
-
-        /*Quotes*/ 
-        
-        
-
-        document.getElementsByClassName("firstSpan")[0].innerHTML = array[numPicker][0];
-        document.getElementsByClassName("authors")[0].innerHTML = array[numPicker][1];
-
-        /*Colors*/
-
-        document.querySelector("span").style.color="rgb("+  color +")";
-        document.querySelector("i").style.color="rgb("+  color +")";
+        document.querySelector("body").style.backgroundColor = "rgb("+ color +")";
         document.getElementsByClassName("twitter")[0].style.backgroundColor="rgb("+  color +")";
         document.getElementsByClassName("tumbler")[0].style.backgroundColor="rgb("+  color +")";
         document.getElementsByClassName("newQuote")[0].style.backgroundColor="rgb("+  color +")";
-        document.getElementsByClassName("authors")[0].style.color="rgb("+ color +")";
+        
+        document.querySelector("span").style.color="rgb("+  color +")";
+        document.getElementsByClassName("fa-quote-left")[0].style.color="rgb("+  color +")";
 
         document.getElementsByClassName("Michael")[0].style.backgroundColor="rgb("+ color +")";
-}
 
-
+    })
+});
